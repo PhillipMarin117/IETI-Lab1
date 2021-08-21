@@ -1,13 +1,13 @@
-package edu.escuelaing.ieti.microservice;
+package edu.escuelaing.ieti.microservices;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MicroserviceApplication {
+public class MicroservicesApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MicroserviceApplication.class, args);
+		SpringApplication.run(MicroservicesApplication.class, args);
 	}
 
 }
