@@ -20,32 +20,27 @@ public class UserController {
 
     @GetMapping
     public ResponseEntity<List<User>> all() {
-        //TODO implement this method using UserService
         return new ResponseEntity<>(userService.all(), HttpStatus.OK);
     }
 
     @GetMapping( "/{id}" )
     public ResponseEntity<User> findById( @PathVariable String id ) {
-        //TODO implement this method using UserService
         return new ResponseEntity<>(userService.findById(id), HttpStatus.OK);
     }
 
 
     @PostMapping
     public ResponseEntity<User> create( @RequestBody UserDto userDto ) {
-        //TODO implement this method using UserService
         return new ResponseEntity<>(userService.create(userDto), HttpStatus.OK);
     }
 
     @PutMapping( "/{id}" )
     public ResponseEntity<User> update( @RequestBody UserDto userDto, @PathVariable String id ) {
-        //TODO implement this method using UserService
         return new ResponseEntity<>(userService.update(userDto,id), HttpStatus.OK);
     }
 
     @DeleteMapping( "/{id}" )
     public ResponseEntity<Boolean> delete( @PathVariable String id ) {
-        //TODO implement this method using UserService
         return new ResponseEntity<>(userService.deleteById(id),HttpStatus.OK);
     }
 }

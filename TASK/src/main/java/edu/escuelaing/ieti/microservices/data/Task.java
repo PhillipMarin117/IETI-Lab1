@@ -1,8 +1,8 @@
-package edu.escuelaing.ieti.microservices.Data;
+package edu.escuelaing.ieti.microservices.data;
 
-import edu.escuelaing.ieti.microservices.Dto.TaskDto;
+import edu.escuelaing.ieti.microservices.dto.TaskDto;
 import java.util.UUID;
-import java.sql.Date;
+import java.util.Date;
 
 public class Task {
 
@@ -10,7 +10,6 @@ public class Task {
     private String name;
     private String description;
     private TaskEnum status;
-    private User assignedTo;
     private Date dueDate;
     private Date created;
 
@@ -19,7 +18,6 @@ public class Task {
         this.name = taskDto.getName();
         this.description = taskDto.getDescription();
         this.status = taskDto.getStatus();
-        this.assignedTo = new User(taskDto.getAssignedTo());
         this.dueDate = (Date) taskDto.getDueDate();
         this.created = (Date) taskDto.getCreated();
     }
@@ -29,7 +27,6 @@ public class Task {
         this.name = taskDto.getName();
         this.description = taskDto.getDescription();
         this.status = taskDto.getStatus();
-        this.assignedTo = new User(taskDto.getAssignedTo());
         this.dueDate = (Date) taskDto.getDueDate();
         this.created = (Date) taskDto.getCreated();
     }
@@ -64,14 +61,6 @@ public class Task {
 
     public void setStatus(TaskEnum status) {
         this.status = status;
-    }
-
-    public User getAssignedTo() {
-        return assignedTo;
-    }
-
-    public void setAssignedTo(User assignedTo) {
-        this.assignedTo = assignedTo;
     }
 
     public Date getDueDate() {

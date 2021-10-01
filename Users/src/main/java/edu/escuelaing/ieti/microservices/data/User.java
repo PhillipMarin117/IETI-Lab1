@@ -2,7 +2,9 @@ package edu.escuelaing.ieti.microservices.data;
 
 import edu.escuelaing.ieti.microservices.dto.UserDto;
 
-import java.sql.Date;
+import java.util.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.UUID;
 
 public class User {
@@ -17,7 +19,13 @@ public class User {
         this.name = userDto.getName();
         this.lastName = userDto.getLastName();
         this.email = userDto.getEmail();
-        this.createdAt = userDto.getCreatedAt();
+        try{
+            SimpleDateFormat formatter1=new SimpleDateFormat("dd/MM/yyyy");
+            this.createdAt = formatter1.parse(userDto.getCreatedAt());
+        }catch (ParseException E){
+            String createdAt1="1/10/2021";
+        }
+
     }
 
     public User(String id, UserDto userDto) {
@@ -25,7 +33,12 @@ public class User {
         this.name = userDto.getName();
         this.lastName = userDto.getLastName();
         this.email = userDto.getEmail();
-        this.createdAt = userDto.getCreatedAt();
+        try{
+            SimpleDateFormat formatter1=new SimpleDateFormat("dd/MM/yyyy");
+            this.createdAt = formatter1.parse(userDto.getCreatedAt());
+        }catch (ParseException E){
+            String createdAt1="1/10/2021";
+        }
     }
 
     public String getId() {
@@ -61,7 +74,7 @@ public class User {
     }
 
     public Date getCreatedAt() {
-        return (Date) createdAt;
+        return createdAt;
     }
 
     public void setCreatedAt(Date createdAt) {

@@ -1,22 +1,19 @@
-package edu.escuelaing.ieti.microservices.Dto;
+package edu.escuelaing.ieti.microservices.dto;
 
-import edu.escuelaing.ieti.microservices.Data.TaskEnum;
-import edu.escuelaing.ieti.microservices.Data.User;
+import edu.escuelaing.ieti.microservices.data.TaskEnum;
 import java.util.Date;
 
 public class TaskDto {
     private String name;
     private String description;
     private TaskEnum status;
-    private UserDto assignedTo;
     private Date dueDate;
     private Date created;
 
-    public TaskDto(String name, String description, TaskEnum status, UserDto assignedTo, Date dueDate, Date created) {
+    public TaskDto(String name, String description, TaskEnum status, Date dueDate, Date created) {
         this.name = name;
         this.description = description;
         this.status = status;
-        this.assignedTo = assignedTo;
         this.dueDate = dueDate;
         this.created = created;
     }
@@ -45,13 +42,6 @@ public class TaskDto {
         this.status = status;
     }
 
-    public UserDto getAssignedTo() {
-        return assignedTo;
-    }
-
-    public void setAssignedTo(UserDto assignedTo) {
-        this.assignedTo = assignedTo;
-    }
 
     public Date getDueDate() {
         return dueDate;

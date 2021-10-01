@@ -1,7 +1,7 @@
-package edu.escuelaing.ieti.microservices.Services;
+package edu.escuelaing.ieti.microservices.service;
 
-import edu.escuelaing.ieti.microservices.Dto.TaskDto;
-import org.springframework.scheduling.config.Task;
+import edu.escuelaing.ieti.microservices.data.Task;
+import edu.escuelaing.ieti.microservices.dto.TaskDto;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.HashMap;

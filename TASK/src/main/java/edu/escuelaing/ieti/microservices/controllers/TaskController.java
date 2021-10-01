@@ -1,8 +1,8 @@
-package edu.escuelaing.ieti.microservices.Controllers;
+package edu.escuelaing.ieti.microservices.controllers;
 
-import edu.escuelaing.ieti.microservices.Data.Task;
-import edu.escuelaing.ieti.microservices.Dto.TaskDto;
-import edu.escuelaing.ieti.microservices.Services.TaskService;
+import edu.escuelaing.ieti.microservices.data.Task;
+import edu.escuelaing.ieti.microservices.dto.TaskDto;
+import edu.escuelaing.ieti.microservices.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

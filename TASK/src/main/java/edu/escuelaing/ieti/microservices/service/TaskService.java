@@ -1,7 +1,7 @@
-package edu.escuelaing.ieti.microservices.Services;
+package edu.escuelaing.ieti.microservices.service;
 
-import edu.escuelaing.ieti.microservices.Dto.TaskDto;
-import org.springframework.scheduling.config.Task;
+import edu.escuelaing.ieti.microservices.dto.TaskDto;
+import edu.escuelaing.ieti.microservices.data.Task;
 import java.util.List;
 
 public interface TaskService {
